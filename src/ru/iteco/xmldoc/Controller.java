@@ -182,7 +182,7 @@ public class Controller {
      * Мапа параметров для базового шаблона
      *
      * @return мапа параметров
-     * @throws IOException
+     * @throws java.io.IOException
      */
     protected Map<Object, Object> getBaseTemplateMap() {
         HashMap<Object, Object> data = new HashMap<Object, Object>();
@@ -255,7 +255,7 @@ class TemplateHelper{
      * Геттер конфигурации freemarker
      *
      * @return объект конфигурации
-     * @throws IOException
+     * @throws java.io.IOException
      */
     protected Configuration getTemplateConfiguration() throws IOException{
         if(templateConfig == null){
@@ -274,7 +274,7 @@ class TemplateHelper{
      * Геттер freemarker шаблона экшна
      *
      * @return объект шаблона
-     * @throws IOException
+     * @throws java.io.IOException
      */
     protected Template getActionTemplate() throws IOException {
         if(htmlActionTpl == null)
@@ -289,7 +289,7 @@ class TemplateHelper{
      * Геттер freemarker шаблона основного HTML
      *
      * @return объект шаблона
-     * @throws IOException
+     * @throws java.io.IOException
      */
     protected Template getBaseTemplate() throws IOException {
         if(htmlBaseTpl == null)

@@ -260,7 +260,7 @@ public abstract class AbstractGenerator<T extends ConfigEx> {
          * Геттер конфигурации freemarker
          *
          * @return объект конфигурации
-         * @throws IOException
+         * @throws java.io.IOException
          */
          protected Configuration getTemplateConfiguration() throws IOException{
             if(templateConfig == null){
@@ -279,7 +279,7 @@ public abstract class AbstractGenerator<T extends ConfigEx> {
             * Геттер freemarker шаблона экшна
             *
             * @return объект шаблона
-            * @throws IOException
+            * @throws java.io.IOException
             */
            protected Template getActionTemplate() throws IOException {
                if(htmlActionTpl == null)
@@ -294,7 +294,7 @@ public abstract class AbstractGenerator<T extends ConfigEx> {
             * Геттер freemarker шаблона основного HTML
             *
             * @return объект шаблона
-            * @throws IOException
+            * @throws java.io.IOException
             */
            protected Template getBaseTemplate() throws IOException {
                if(htmlBaseTpl == null)

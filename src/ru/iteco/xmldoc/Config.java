@@ -12,11 +12,6 @@ import org.jdom2.Content;
 import org.jdom2.Element;
 import org.jdom2.output.XMLOutputter;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * <h3></h3>
  * <p></p>
