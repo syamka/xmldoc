@@ -9,11 +9,7 @@
 package ru.iteco.xmldoc;
 
 import org.jdom2.Element;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * <h3></h3>
@@ -21,7 +17,7 @@ import java.util.TreeSet;
  * <p>Author: predtechenskaya (predtechenskaya@i-teco.ru)</p>
  * <p>Date: 09.04.13</p>
  */
-public class ActionsGenerator extends AbstractGenerator<ActionConfig> {
+public class ActionsGenerator extends AbstractGenerator<Action> {
 
     //Множество вссех прекондишнов
     protected Set<String> preconditions = new TreeSet<String>();
@@ -33,8 +29,8 @@ public class ActionsGenerator extends AbstractGenerator<ActionConfig> {
         super.process(el, path);
 
         Config confEl = ConfigEx.getElement(el, path);
-        if(confEl instanceof ActionConfig){
-            ActionConfig action = (ActionConfig) confEl;
+        if(confEl instanceof Action){
+            Action action = (Action) confEl;
 
             if(action.getExecutionClass() != null)
                 executions.add(action.getExecutionClass());
@@ -60,11 +56,6 @@ public class ActionsGenerator extends AbstractGenerator<ActionConfig> {
         return "action";
     }
 
-    @Override
-    public void run() throws Exception {
-        setTemplateHelper("action.ftl","base.ftl", "actions", "result.html");
-        super.run();
-    }
 
     public static void main(String...args) throws Exception {
         new ActionsGenerator().run();

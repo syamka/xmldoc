@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * TODO 1. разобраться с глюками поиска (JS) 2. добавить поиск по классу исполнения 3. пробрасывать отнаследованные свойства
+ *
+ *
  * <h3></h3>
  * <p></p>
  * <p>Author: predtechenskaya (predtechenskaya@i-teco.ru)</p>
@@ -32,12 +35,6 @@ public class ComponentsGenerator extends AbstractGenerator<Component> {
     @Override
     protected String getElementName() {
         return "component";
-    }
-
-    @Override
-    public void run() throws Exception {
-        setTemplateHelper("component.ftl", "base_c.ftl", "components", "components.html");
-        super.run();
     }
 
     public static void main(String...args) throws Exception {

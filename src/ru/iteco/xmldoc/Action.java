@@ -19,9 +19,9 @@ import java.util.*;
  * <p>Author: predtechenskaya (predtechenskaya@i-teco.ru)</p>
  * <p>Date: 03.04.13</p>
  */
-public class ActionConfig extends ConfigEx {
+public class Action extends ConfigEx {
 
-    public ActionConfig(Element element, String path){
+    public Action(Element element, String path){
         init(element, path);
     }
 

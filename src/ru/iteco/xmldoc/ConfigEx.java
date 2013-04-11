@@ -30,7 +30,7 @@ public abstract class ConfigEx extends Config {
         if(el.getAttributeValue("notdefined") != null)
             return new Notdefined(el, path);
         if(el.getName().equals("action"))
-            return new ActionConfig(el,path);
+            return new Action(el,path);
         if(el.getName().equals("component"))
             return new Component(el,path);
         return null;
